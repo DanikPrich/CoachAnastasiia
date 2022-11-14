@@ -1,0 +1,39 @@
+
+	
+	
+.foryou
+	&-block
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&__item
+			width: 600px
+			min-height: 130px
+			text-align: center
+			padding: 20px
+			// border: 1px solid grey
+			margin-bottom: 30px
+			border-radius: 0px
+			background-color: $yellow
+			transition: 0.2s ease-in-out 
+			&:hover 
+				background-color: $grey
+				color: $white
+				cursor: pointer
+
+		&__title
+			font-weight: 300
+			margin-bottom: 10px
+			font-size: 20px
+			// color: black
+			+sans-serif
+		&__text
+			font-weight: 300
+			font-size: 18px
+
+@media (max-width: 1300px)
+	.foryou
+		&-block
+			justify-content: center
+			&__item
+				width: 700px
