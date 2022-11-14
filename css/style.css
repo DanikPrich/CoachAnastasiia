@@ -284,6 +284,7 @@ h6 {
   border-radius: 0px;
   background-color: rgba(235, 229, 224, 0.521);
   transition: 0.2s ease-in-out;
+  color: inherit;
 }
 .foryou-block__item:hover {
   background-color: #40403f;
