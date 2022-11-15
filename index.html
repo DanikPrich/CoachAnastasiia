@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<title>Всё в твоих руках</title>
 
 </head>
@@ -26,13 +27,13 @@
 						<div data-aos="fade-right" data-aos-once="true" data-aos-duration="1500" class="header__text">коуч <b>·</b>
 							расскрываю твою проявленность</div>
 					</div>
-					<button class="header__btn">Услуги</button>
+					<button class="header__btn button">Услуги</button>
 				</div>
 				<div class="header__image">
-					<img data-aos="fade-left" data-aos-once="true" data-aos-duration="1500" src="./img/header__image.jpg" alt="">
+					<img data-aos="fade-left" data-aos-once="true" data-aos-duration="1500" src="./img/header/header__image.jpg" alt="">
 				</div>
 				<div class="header__subimage">
-					<img data-aos="fade-right" data-aos-once="true" data-aos-duration="1000" src="./img/header__subimage.jpg"
+					<img data-aos="fade-right" data-aos-once="true" data-aos-duration="1000" src="./img/header/header__subimage.jpg"
 						alt="">
 					<div data-aos="fade-right" data-aos-once="true" data-aos-duration="1000" class="header__subimage-white"></div>
 				</div>
@@ -46,44 +47,126 @@
 			<h2 class="section-title section__title">Приходи на сессию, если ты:</h2>
 
 			<div class="foryou-block">
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">01</div>
 					<div class="foryou-block__text">Хочешь решиться на изменения, обрести уверенность и получить поддержку</div>
-				</a>
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				</div>
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">02</div>
 					<div class="foryou-block__text">Попал в состояние апатии, но хочешь взять ответственность за свою жизнь, перестать прокрастинировать и начать действовать</div>
-				</a>
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				</div>
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">03</div>
 					<div class="foryou-block__text">Выгорел и не чувствуешь своей ценности, как личность и эксперт</div>
-				</a>
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				</div>
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">04</div>
 					<div class="foryou-block__text">Хочешь развиваться онлайн, но не можешь найти первых клиентов и построить стратегию развития</div>
-				</a>
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				</div>
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">05</div>
 					<div class="foryou-block__text">Мечтаешь поставить себе мотивирующие цели и добиться их из состояния лёгкости</div>
-				</a>
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				</div>
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">06</div>
 					<div class="foryou-block__text">Хочешь распаковать свои ценности и потенциал</div>
-				</a>
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				</div>
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">07</div>
 					<div class="foryou-block__text">Хочешь проработать страхи и установки, синдром самозванца</div>
-				</a>
-				<a data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" href="#">
+				</div>
+				<div data-aos="zoom-in" data-aos-once="true" class="foryou-block__item" >
 					<div class="foryou-block__title">08</div>
 					<div class="foryou-block__text">Хочешь начать зарабатывать на своем призвании</div>
-				</a>
+				</div>
 			</div>
+			<div class="foryou__btn">
+				<a class="button">Это про меня</a>
+			</div>
+		</div>
+	</section>
 
+	<section class="results section">
+		<div class="container">
+			<h2 class="section-title section__title">Твои результаты после работы со мной:</h2>
+	
+			<div class="results__wrapper">
+				
+				<div class="results-slider-wrap">
+					<div class="results-slider">
+						<div class="results-slider__item">
+							<img src="img/slider/2.png" alt="result">
+						</div>
+						<div class="results-slider__item">
+							<img src="img/slider/1.png" alt="result">
+						</div>
+						<div class="results-slider__item">
+							<img src="img/slider/4.png" alt="result">
+						</div>
+						<div class="results-slider__item">
+							<img src="img/slider/3.png" alt="result">
+						</div>
+						<div class="results-slider__item">
+							<img src="img/slider/6.png" alt="result">
+						</div>
+						<div class="results-slider__item">
+							<img src="img/slider/5.png" alt="result">
+						</div>
+					</div>
+					<div class="results-slider-arrows">
+						<button class="arrow arrow-left">
+							<img src="img/slider/left.png" alt="">
+						</button>
+						<button class="arrow arrow-right">
+							<img src="img/slider/right.png" alt="">
+						</button>
+					</div>
+				</div>
+				<div class="results__text" >
+					<span >
+						Каждый из пакетов прекрасен и даст тебе возможность получить новые результаты. Потому что идти в новое ты будешь со мной. У тебя есть возможность перенять мой опыт, свежий взгляд, поддержку, мотивацию и структуру. Мой подход позволяет расти каждую сессию в удобном для тебя темпе, бороться со страхами, найти в себе внутреннюю опору и шаг за шагом создавать жизнь своей мечты.
+					</span>
+				</div>
+
+				<div class="foryou__btn">
+					<a class="button">Хочу также</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="youfind section">
+		<div class="container">
+			<div class="youfind-block">
+				<div class="youfind-text">
+					<h2 class="youfind-text__title">За время работы на сессиях ты: </h2>
+					<div class="youfind-text__text">
+						<p>→ узнаешь себя глубже </p>
+						<p>→ избавишься от страхов и негативных установок </p>
+						<p>→ раскроешь свой потенциал</p>
+						<p>→ создашь внутреннюю опору </p>
+						<p>→ проработаешь свою ценность, как личности и эксперта </p>
+						<p>→ обретешь уверенность в себе </p>
+						<p>→ пропишешь свои ценности </p>
+						<p>→ поймешь свое призвание </p>
+						<p>→ начнешь зарабатывать на своем деле </p>
+						<p>→ начнешь проявлять себя миру, осознаешь свою уникальность и громче заявишь о себе и своих услугах</p>
+					</div>
+				</div>
+				<div class="youfind-img">
+					<img src="./img/youfind/youfind.jpg" alt="Не надо стеняться быть ахуенной">
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery.event.move.js"></script>
+	<script src="js/jquery.twentytwenty.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

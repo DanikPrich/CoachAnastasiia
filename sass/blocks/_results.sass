@@ -1,0 +1,65 @@
+.results
+	background-color: $yellow
+	&__wrapper
+		// padding: 0px 20px
+
+	&-slider
+		&-wrap
+			margin: auto
+			max-width: 500px
+			position: relative
+		&-arrows
+			position: absolute
+			display: flex
+			justify-content: space-between
+			top: 40%
+			width: 100%
+			transform: translateY(100%)
+		&__dots
+			// margin: auto
+			margin-top: 10px
+			display: flex !important
+			justify-content: center
+			align-items: center
+			list-style: none
+			padding: 0
+			li
+				width: 10px
+				height: 10px
+				background-color: #d1d1d1
+				border-radius: 50%
+				margin: 5px
+				&.slick-active
+					background-color: $grey
+				button
+					display: none
+	.arrow
+		// background-color: transparent
+		
+		border: none
+		cursor: pointer
+		width: 10px
+		height: 10px
+		&:focus
+			outline: none
+		&-left
+			// transform: translateY(-100%)
+			transform: translateX(-100%)
+		&-right
+			transform: translateX(100%)
+
+
+	&__text
+		margin-top: 30px
+		text-align: center
+		+roboto
+		font-weight: 200
+		font-size: 23px
+		padding: 20px 100px
+
+
+@media (max-width: 1199px)
+	.results
+		&__text
+			padding: 0px
+			font-size: 18px

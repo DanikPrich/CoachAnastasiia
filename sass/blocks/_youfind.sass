@@ -1,0 +1,51 @@
+.youfind
+	&-block
+		background-color: $yellow
+		padding: 40px 80px
+		display: flex
+		position: relative
+		margin-top: 50px
+
+	&-text
+		&__title
+			font-size: 35px
+			+sans-serif
+			text-transform: uppercase
+			margin-bottom: 30px
+		&__text
+			font-size: 20px
+			// line-height: 1.7em
+			letter-spacing: .04em
+			font-weight: 300
+			max-width: 65%
+			p
+				margin-bottom: 10px
+	&-img
+		width: 400px
+		position: absolute
+		right: 50px
+		top: -100px
+
+@media (max-width: 1300px)
+	.youfind
+		&-block
+			margin-top: 0
+		&-text
+			&__text
+				font-size: 24px
+				max-width: 100%
+		&-img
+			display: none
+
+@media (max-width: 670px)
+	.youfind
+		&-block
+			padding: 30px 40px
+			
+		&-text
+			&__title
+				font-size: 28px
+			&__text
+				font-size: 18px
+				max-width: 100%
+		
