@@ -1,4 +1,5 @@
-window.onload = function () {
+// window.onload = function () {
+window.addEventListener("DOMContentLoaded", () => {
 	AOS.init({
 		// offset: 200,
 		duration: 700,
@@ -18,79 +19,62 @@ window.onload = function () {
 	});
 
 
+	/* var input = document.querySelector('#phone');
 
-
-
-
-
-
-
-
-
-	/* function addSlickOnPrice() {
-		$('.services__wrapper').slick({
-			draggable: true,
-			dots: true,
-			// prevArrow: $('.arrow-left'),
-			// nextArrow: $('.arrow-right'),
-			dotsClass: 'results-slider__dots',
-			autoplay: true,
-			autoplaySpeed: 5000,
-			adaptiveHeight: true,
-		});
-	}
-
-	function removeSlickFromPrice() {
-		$('.services__wrapper').slick('unslick')
-	}
-
-	if(window.innerWidth < 1600) {
-		addSlickOnPrice();
-	}
-
-	addEventListener("resize", (event) => {
-
-		if(event.target.innerWidth < 1600) {
-			addSlickOnPrice();
-		} else {
-			removeSlickFromPrice()
-		}
+	window.intlTelInput(input, {
+			utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js'
 	}); */
 
-	/* $('.slider').slick({
-		dots: true,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		responsive: [
-			{
-				breakpoint: 1815,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-					// infinite: true,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 1300,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
+	let input = document.querySelector("#phone"),
+  errorMsg = document.querySelector("#error-msg"),
+  validMsg = document.querySelector("#valid-msg");
+
+	// here, the index maps to the error code returned from getValidationError - see readme
+	let errorMap = ["Неверный формат", "Неверный код страны", "Слишком короткий", "Слишком длинный", "Неверный формат"];
+
+	// initialise plugin
+	let iti = window.intlTelInput(input, {
+		utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.min.js",
+		preferredCountries: ['ua', 'sk', 'gb', 'usa']
+	});
+
+	let reset = function() {
+		input.classList.remove("error");
+		errorMsg.innerHTML = "";
+		errorMsg.classList.add("hide");
+		validMsg.classList.add("hide");
+	};
+
+	// on blur: validate
+	input.addEventListener('blur', function() {
+		reset();
+		if (input.value.trim()) {
+			if (iti.isValidNumber()) {
+				validMsg.classList.remove("hide");
+			} else {
+				input.classList.add("error");
+				let errorCode = iti.getValidationError();
+				errorMsg.innerHTML = errorMap[errorCode];
+				errorMsg.classList.remove("hide");
 			}
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
-		]
-	}); */
+		}
+	});
 
-}
+	// on keyup / change flag: reset
+	input.addEventListener('change', reset);
+	input.addEventListener('keyup', reset);
+
+
+
+
+/* Функция прокрутки к нужному месту */
+	$("button[href*='#']").on("click", function(e){
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 1000);
+		e.preventDefault();
+		return false;
+	});
+
+});

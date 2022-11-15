@@ -1,0 +1,31 @@
+.footer
+	padding: 50px 50px
+	background-color: $grey
+	&__wrapper
+		display: flex
+		justify-content: center
+	&__block	
+		width: 100%
+		align-items: center
+		display: flex
+		flex-direction: column
+		&_title
+			text-transform: uppercase
+			font-weight: 300
+			margin-bottom: 10px
+			color: $white
+	&__icons
+		a
+			margin-left: 10px
+			&:first-child
+				margin-left: 0
+			
+		img
+			width: 30px
+			height: 30px
+
+@media (max-width: 400px)
+	.footer
+		&__wrapper
+		&__block	
+			font-size: 14px

@@ -5,14 +5,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400;500&display=swap"
-		rel="stylesheet">
+	href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400;500&display=swap"
+	rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/style.css">
+
 	<title>Всё в твоих руках</title>
 
 </head>
@@ -29,7 +31,7 @@
 						<div data-aos="fade-right" data-aos-once="true" data-aos-duration="1500" class="header__text">коуч <b>·</b>
 							расскрываю твою проявленность</div>
 					</div>
-					<button class="header__btn button">Услуги</button>
+					<button href="#services"  class="header__btn button">Услуги</button>
 				</div>
 				<div class="header__image">
 					<img data-aos="fade-left" data-aos-once="true" data-aos-duration="1500" src="./img/header/header__image.jpg"
@@ -44,7 +46,7 @@
 		</div>
 	</header>
 
-	<section class="foryou section">
+	<section class="foryou section" id="team">
 		<div class="container">
 
 			<h2 class="section-title section__title">Приходи на сессию, если ты:</h2>
@@ -87,7 +89,7 @@
 				</div>
 			</div>
 			<div class="foryou__btn">
-				<button class="button">Это про меня</и>
+				<button href="#services" class="button">Это про меня</button>
 			</div>
 		</div>
 	</section>
@@ -138,7 +140,7 @@
 				</div>
 
 				<div class="foryou__btn">
-					<button class="button">Хочу также</button>
+					<button href="#services" class="button">Хочу также</button>
 				</div>
 			</div>
 		</div>
@@ -214,12 +216,12 @@
 				</div>
 			</div>
 			<div class="benefits__btn">
-				<button class="button">Хочу создать жизнь своей мечты</button>
+				<button href="#services" class="button">Хочу создать жизнь своей мечты</button>
 			</div>
 		</div>
 	</section>
 
-	<section class="section services">
+	<section class="services section" id="services">
 		<div class="services__container">
 			<h2 class="section-title section__title">Услуги</h2>
 			<h1 class="services__arrow">Листай вправо →</h1>
@@ -253,7 +255,7 @@
 						<span style="font-family: 'Playfair Display'">Стоимость:</span>
 						<span style="font-family: 'Roboto'">90€</span>
 						<div class="services__service_btn">
-							<button class="button">Зарегистрироваться</button>
+							<button href="#registration" class="button">Зарегистрироваться</button>
 						</div>
 					</div>
 				</div>
@@ -284,7 +286,7 @@
 						<span style="font-family: 'Playfair Display'">Стоимость:</span>
 						<span style="font-family: 'Roboto'">80€</span>
 						<div class="services__service_btn">
-							<button class="button">Зарегистрироваться</button>
+							<button href="#registration" class="button">Зарегистрироваться</button>
 						</div>
 					</div>
 				</div>
@@ -317,7 +319,7 @@
 						<span style="font-family: 'Roboto'">260€</span>
 						<span style="font-family: 'Roboto'; color: rgb(150, 150, 150)">(65€/шт.)</span>
 						<div class="services__service_btn">
-							<button class="button">Зарегистрироваться</button>
+							<button href="#registration" class="button">Зарегистрироваться</button>
 						</div>
 					</div>
 				</div>
@@ -349,7 +351,7 @@
 						<span style="font-family: 'Roboto'">500€</span>
 						<span style="font-family: 'Roboto'; color: rgb(150, 150, 150)">(50€/шт.)</span>
 						<div class="services__service_btn">
-							<button class="button">Зарегистрироваться</button>
+							<button href="#registration" class="button">Зарегистрироваться</button>
 						</div>
 					</div>
 				</div>
@@ -357,20 +359,71 @@
 		</div>
 	</section>
 
-	<section class="section footer">
+	<section class="form section" id="registration">
 		<div class="container">
-			<div class="footer__wrapper">
-				
+			<h2 class="section-title section__title">Регистрация:</h2>
+
+			<div class="form__wrapper" >
+				<form action="#" class="form__form"> 
+					<div class="input__item">
+						<div class="input__item_title">Имя</div>
+						<input class="input" type="name" placeholder="Введите имя">
+					</div>
+					<div class="input__item">
+						<div class="input__item_title">Телефон</div>
+						<!-- <input class="input" type="phone" placeholder="Введите номер телефона"> -->
+						<div class="input__item-block">
+							<input type="tel" id="phone" class="input-phone">
+							<span id="valid-msg" class="hide">✓</span>
+						</div>
+						<span id="error-msg" class="hide"></span>
+
+					</div>
+					<div class="input__item">
+						<div class="input__item_title">Email</div>
+						<input class="input" type="email" name="" id="" placeholder="Введите Email">
+					</div>
+					<input type="submit" class="form__btn button">
+				</form>
+				<div class="form__img">
+					<img src="./img/header/header__image.jpg" alt="">
+					<div class="form__img-background"></div>
+				</div>
 			</div>
 		</div>
 	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__block">
+					<span class="footer__block_title">2022. Все права защещены.</span>
+					<div class="footer__icons">
+						<a href="https://t.me/anastasiiavdieieva">
+							<img src="./img/footer/telegram.png" alt="">
+						</a>
+						<a href="https://instagram.com/felbettr?igshid=YmMyMTA2M2Y=">
+							<img src="./img/footer/instagram.png" alt="">
+						</a>
+						<a href="https://vk.com/nana_bananan">
+							<img src="./img/footer/vk.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="js/jquery.event.move.js"></script>
 	<script src="js/jquery.twentytwenty.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
+	
+	
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

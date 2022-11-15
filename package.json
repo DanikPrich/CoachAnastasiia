@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanikPrich/CoachAnastasiia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanikPrich/CoachAnastasiia/issues"
+  },
+  "homepage": "https://github.com/DanikPrich/CoachAnastasiia#readme",
+  "dependencies": {
+    "intl-tel-input": "^17.0.19"
+  }
+}
