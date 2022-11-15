@@ -1,0 +1,125 @@
+.services
+	&__container
+		max-width: 1800px
+		width: 100%
+		padding: 0 30px
+		margin: 0 auto
+	&__wrapper
+		display: flex
+		justify-content: center
+		grid-gap: 30px 
+		overflow-x: auto
+	&__service
+		padding: 30px
+		background-color: $yellow
+		// width: 25%
+		max-height: 650px
+		width: 380px
+		min-width: 380px
+		display: flex 
+		flex-direction: column
+		justify-content: space-between 
+		&_title
+			+sans-serif
+			font-size: 22px
+			font-weight: 700
+			text-align: center
+			border-bottom: 1px solid black
+			&-about
+				font-size: 18px
+				+sans-serif
+				text-align: center
+				margin-top: 5px
+				margin-bottom: 20px
+				position: relative
+				color: $grey
+				// &:after
+				// 	content: ''
+				// 	height: 1px
+				// 	width: 100%
+				// 	position: absolute
+				// 	border-bottom: 1px solid black
+				// 	left: 0
+				// 	top: 35px					
+		&_forwhom
+			margin-top: 20px
+			text-align: center
+			color: $grey
+			+roboto
+			font-weight: 300
+			
+		&_about
+			margin-top: 20px
+			text-align: center
+			color: $grey
+			+roboto
+			font-weight: 300
+
+		&_price
+			margin-top: 20px
+			padding-top: 30px
+			border-top: 1px solid black
+			text-align: center
+			+sans-serif
+			font-size: 20px
+		&_btn
+			margin: 0 auto
+			margin-top: 20px
+			button
+				font-size: 18px
+				padding: 20px 30px
+				
+	&__arrow
+		display: none
+		width: 200px
+		+sans-serif
+		font-size: 24px
+		padding-bottom: 30px
+		margin: auto
+		animation: arrow 2s infinite
+
+@keyframes arrow
+	0%
+		transform: translateX(-0%)
+		animation-timing-function: ease-in
+	50%
+		transform: translateX(5%)
+		animation-timing-function: ease-in
+	100%
+		transform: translateX(0%)
+		animation-timing-function: ease-in
+
+@media (max-width: 1700px)
+	.services
+		&__wrapper
+			justify-content: start
+			// min-width: 1740px
+			flex-wrap: nowrap
+			overflow-x: auto
+		&__service
+			&_title
+			
+			&-about
+		&__arrow
+			display: block
+
+@media (max-width: 600px)
+	.services
+		&__wrapper
+		&__service
+			width: 320px
+			min-width: 320px
+			&_title
+				font-size: 18px
+			&-about
+				font-size: 13px
+				
+			&_forwhom
+				font-size: 14px
+				
+			&_about
+				font-size: 14px
+
+			&_price
+				
+			&_btn
