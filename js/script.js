@@ -8,12 +8,12 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	$('.results-slider').slick({
-		draggable: true,
+		draggable: false,
 		dots: true,
 		prevArrow: $('.arrow-left'),
 		nextArrow: $('.arrow-right'),
 		dotsClass: 'results-slider__dots',
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 5000,
 		adaptiveHeight: true
 	});
