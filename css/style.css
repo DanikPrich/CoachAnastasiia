@@ -643,9 +643,9 @@ h6 {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  top: 30%;
+  top: 50%;
   width: 100%;
-  transform: translateY(100%);
+  transform: translateY(-100%);
 }
 .results-slider__dots {
   margin-top: 10px;
@@ -677,10 +677,10 @@ h6 {
   outline: none;
 }
 .results .arrow-left {
-  transform: translateX(-150%);
+  transform: translateX(-100%);
 }
 .results .arrow-right {
-  transform: translateX(150%);
+  transform: translateX(100%);
 }
 .results__text {
   margin-top: 30px;
@@ -885,19 +885,27 @@ h6 {
   font-weight: 300;
 }
 .services__service_about {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   color: #40403f;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
-.services__service_price {
+.services__service_footer {
   margin-top: 20px;
   padding-top: 30px;
   border-top: 1px solid black;
   text-align: center;
   font-family: "Playfair Display";
   font-size: 20px;
+}
+.services__service_footer-duration {
+  font-weight: 500;
+}
+.services__service_footer-price {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding-top: 10px;
 }
 .services__service_btn {
   margin: 0 auto;
