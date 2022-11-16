@@ -9,7 +9,15 @@
 		justify-content: center
 		grid-gap: 30px 
 		overflow-x: auto
-	&__service
+	&__arrow
+		display: none
+		width: 200px
+		+sans-serif
+		font-size: 24px
+		padding-bottom: 30px
+		margin: auto
+		animation: arrow 2s infinite
+	&-card
 		padding: 30px
 		background-color: $yellow
 		// width: 25%
@@ -19,56 +27,58 @@
 		display: flex 
 		flex-direction: column
 		justify-content: space-between 
-		&_title
+		&__header
 			+sans-serif
 			font-size: 22px
 			font-weight: 700
 			text-align: center
 			border-bottom: 1px solid black
-			&-about
+			&_about
 				font-size: 18px
 				+sans-serif
 				text-align: center
 				margin-top: 5px
 				margin-bottom: 20px
 				position: relative
-				color: $grey	
-		&_forwhom
-			margin-top: 20px
-			text-align: center
-			color: $grey
-			+roboto
-			font-weight: 300
-			
-		&_about
-			margin-top: 20px
-			text-align: center
-			color: $grey
-			+roboto
-			font-weight: 300
-
-		&_price
-			margin-top: 20px
+				color: $grey
+		&__body
+			padding: 20px 0
+			+sans-serif
+			font-weight: 500
+			display: flex
+			flex-direction: column
+			align-items: center
+			&_forwhom
+				text-align: center
+				color: $grey
+				+roboto
+				font-weight: 300
+				margin: 10px 0 20px 0
+			&_about
+				text-align: center
+				color: $grey
+				+roboto
+				font-weight: 300
+				margin-top: 10px
+		&__footer
 			padding-top: 30px
 			border-top: 1px solid black
 			text-align: center
 			+sans-serif
 			font-size: 20px
-		&_btn
-			margin: 0 auto
-			margin-top: 20px
-			button
-				font-size: 18px
-				padding: 20px 30px
-				
-	&__arrow
-		display: none
-		width: 200px
-		+sans-serif
-		font-size: 24px
-		padding-bottom: 30px
-		margin: auto
-		animation: arrow 2s infinite
+			&_duration
+				// font-family: 'Roboto'
+			&_price
+				font-family: 'Roboto'
+				font-weight: 300
+				margin-top: 10px
+			&_btn
+				margin: 0 auto
+				margin-top: 10px
+				button
+					font-size: 18px
+					padding: 20px 30px
+	
 
 @keyframes arrow
 	0%
@@ -81,33 +91,27 @@
 		transform: translateX(0%)
 		animation-timing-function: ease-in
 
+	
 @media (max-width: 1700px)
 	.services
 		&__wrapper
 			justify-content: start
-			// min-width: 1740px
 			flex-wrap: nowrap
 			overflow-x: auto
-		&__service
-			&_title
-			
-			&-about
 		&__arrow
 			display: block
 
 @media (max-width: 600px)
 	.services
-		&__wrapper
-		&__service
+		&-card
 			width: 320px
 			min-width: 320px
-			&_title
-				font-size: 18px
-			&-about
+			&__header
+				font-size: 17px
+			&__body
 				font-size: 13px
-				
-			&_forwhom
-				font-size: 14px
+				&-forwhom
+					font-size: 14px
 				
 			&_about
 				font-size: 14px
@@ -115,3 +119,30 @@
 			&_price
 				
 			&_btn
+
+@media (max-width: 400px)
+	.services
+		&-card
+			width: 280px
+			min-width: 280px
+			&__header
+				font-size: 14px
+				&-about
+					font-size: 13px
+			&__body
+				font-size: 13px
+				&-forwhom
+					font-size: 10px
+				&-about
+					font-size: 10px	
+			&__footer
+				font-size: 13px
+				&_price
+					font-size: 16px
+				&_btn
+					button
+						font-size: 14px
+						padding: 20px
+
+			&_price
+				

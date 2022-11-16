@@ -851,62 +851,6 @@ h6 {
   grid-gap: 30px;
   overflow-x: auto;
 }
-.services__service {
-  padding: 30px;
-  background-color: rgba(235, 229, 224, 0.521);
-  max-height: 650px;
-  width: 380px;
-  min-width: 380px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.services__service_title {
-  font-family: "Playfair Display";
-  font-size: 22px;
-  font-weight: 700;
-  text-align: center;
-  border-bottom: 1px solid black;
-}
-.services__service_title-about {
-  font-size: 18px;
-  font-family: "Playfair Display";
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  position: relative;
-  color: #40403f;
-}
-.services__service_forwhom {
-  margin-top: 20px;
-  text-align: center;
-  color: #40403f;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-.services__service_about {
-  margin-top: 20px;
-  text-align: center;
-  color: #40403f;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-.services__service_price {
-  margin-top: 20px;
-  padding-top: 30px;
-  border-top: 1px solid black;
-  text-align: center;
-  font-family: "Playfair Display";
-  font-size: 20px;
-}
-.services__service_btn {
-  margin: 0 auto;
-  margin-top: 20px;
-}
-.services__service_btn button {
-  font-size: 18px;
-  padding: 20px 30px;
-}
 .services__arrow {
   display: none;
   width: 200px;
@@ -916,6 +860,74 @@ h6 {
   margin: auto;
   -webkit-animation: arrow 2s infinite;
           animation: arrow 2s infinite;
+}
+.services-card {
+  padding: 30px;
+  background-color: rgba(235, 229, 224, 0.521);
+  max-height: 650px;
+  width: 380px;
+  min-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services-card__header {
+  font-family: "Playfair Display";
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.services-card__header_about {
+  font-size: 18px;
+  font-family: "Playfair Display";
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  color: #40403f;
+}
+.services-card__body {
+  padding: 20px 0;
+  font-family: "Playfair Display";
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services-card__body_forwhom {
+  text-align: center;
+  color: #40403f;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 10px 0 20px 0;
+}
+.services-card__body_about {
+  text-align: center;
+  color: #40403f;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.services-card__footer {
+  padding-top: 30px;
+  border-top: 1px solid black;
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 20px;
+}
+.services-card__footer_price {
+  font-family: "Roboto";
+  font-weight: 300;
+  margin-top: 10px;
+}
+.services-card__footer_btn {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.services-card__footer_btn button {
+  font-size: 18px;
+  padding: 20px 30px;
 }
 
 @-webkit-keyframes arrow {
@@ -964,21 +976,52 @@ h6 {
   }
 }
 @media (max-width: 600px) {
-  .services__service {
+  .services-card {
     width: 320px;
     min-width: 320px;
   }
-  .services__service_title {
-    font-size: 18px;
+  .services-card__header {
+    font-size: 17px;
   }
-  .services__service-about {
+  .services-card__body {
     font-size: 13px;
   }
-  .services__service_forwhom {
+  .services-card__body-forwhom {
     font-size: 14px;
   }
-  .services__service_about {
+  .services-card_about {
     font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .services-card {
+    width: 280px;
+    min-width: 280px;
+  }
+  .services-card__header {
+    font-size: 14px;
+  }
+  .services-card__header-about {
+    font-size: 13px;
+  }
+  .services-card__body {
+    font-size: 13px;
+  }
+  .services-card__body-forwhom {
+    font-size: 10px;
+  }
+  .services-card__body-about {
+    font-size: 10px;
+  }
+  .services-card__footer {
+    font-size: 13px;
+  }
+  .services-card__footer_price {
+    font-size: 16px;
+  }
+  .services-card__footer_btn button {
+    font-size: 14px;
+    padding: 20px;
   }
 }
 .form {
