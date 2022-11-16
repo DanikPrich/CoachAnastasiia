@@ -265,6 +265,11 @@ h6 {
   color: red;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  top: 110%;
+  position: absolute;
 }
 
 #valid-msg {
@@ -320,6 +325,10 @@ h6 {
   width: 100%;
   height: 50px;
   font-family: "Roboto", sans-serif;
+}
+
+.error {
+  border: 1px solid red;
 }
 
 @media (max-width: 660px) {
@@ -520,7 +529,7 @@ h6 {
 }
 @media (max-width: 480px) {
   .header {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   .header__title {
     font-size: 60px;
@@ -543,6 +552,7 @@ h6 {
 @media (max-width: 447px) {
   .header {
     height: 900px;
+    padding-top: 20px;
   }
   .header__image {
     left: 40px;
@@ -643,9 +653,9 @@ h6 {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  top: 30%;
+  top: 33%;
   width: 100%;
-  transform: translateY(100%);
+  transform: translateY(200%);
 }
 .results-slider__dots {
   margin-top: 10px;
@@ -723,7 +733,7 @@ h6 {
   width: 400px;
   position: absolute;
   right: 50px;
-  top: -100px;
+  top: -130px;
 }
 
 @media (max-width: 1300px) {
@@ -839,6 +849,12 @@ h6 {
     font-size: 16px;
   }
 }
+.services {
+  padding-top: 40px;
+}
+.services__title {
+  margin-bottom: 20px;
+}
 .services__container {
   max-width: 1800px;
   width: 100%;
@@ -860,6 +876,7 @@ h6 {
   margin: auto;
   -webkit-animation: arrow 2s infinite;
           animation: arrow 2s infinite;
+  text-align: center;
 }
 .services-card {
   padding: 30px;
@@ -916,6 +933,11 @@ h6 {
   font-family: "Playfair Display";
   font-size: 20px;
 }
+.services-card__footer_duration {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 17px;
+}
 .services-card__footer_price {
   font-family: "Roboto";
   font-weight: 300;
@@ -923,7 +945,7 @@ h6 {
 }
 .services-card__footer_btn {
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .services-card__footer_btn button {
   font-size: 18px;
@@ -975,7 +997,7 @@ h6 {
     display: block;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .services-card {
     width: 320px;
     min-width: 320px;
@@ -989,19 +1011,20 @@ h6 {
   .services-card__body-forwhom {
     font-size: 14px;
   }
-  .services-card_about {
-    font-size: 14px;
+  .services__arrow {
+    font-size: 18px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .services-card {
     width: 280px;
     min-width: 280px;
+    padding: 15px;
   }
   .services-card__header {
-    font-size: 14px;
+    font-size: 18px;
   }
-  .services-card__header-about {
+  .services-card__header_about {
     font-size: 13px;
   }
   .services-card__body {
@@ -1014,6 +1037,7 @@ h6 {
     font-size: 10px;
   }
   .services-card__footer {
+    padding-top: 10px;
     font-size: 13px;
   }
   .services-card__footer_price {
@@ -1026,6 +1050,7 @@ h6 {
 }
 .form {
   background-color: rgba(235, 229, 224, 0.521);
+  padding-top: 50px;
 }
 .form__wrapper {
   display: flex;
@@ -1082,7 +1107,6 @@ h6 {
   width: 100%;
   position: relative;
 }
-
 .iti {
   width: 100%;
 }

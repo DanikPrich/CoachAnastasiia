@@ -1,23 +1,25 @@
 // window.onload = function () {
-window.addEventListener("DOMContentLoaded", () => {
-	AOS.init({
-		// offset: 200,
-		duration: 700,
-		easing: 'ease-in-quad',
-		// delay: 100,
-	});
-
-	$('.results-slider').slick({
-		draggable: true,
-		dots: true,
-		prevArrow: $('.arrow-left'),
-		nextArrow: $('.arrow-right'),
-		dotsClass: 'results-slider__dots',
-		autoplay: false,
-		autoplaySpeed: 5000,
-		adaptiveHeight: true
-	});
-
+	
+	window.addEventListener("DOMContentLoaded", () => {
+		
+		
+		$('.results-slider').slick({
+			draggable: true,
+			dots: true,
+			prevArrow: $('.arrow-left'),
+			nextArrow: $('.arrow-right'),
+			dotsClass: 'results-slider__dots',
+			autoplay: false,
+			autoplaySpeed: 5000,
+			adaptiveHeight: true
+		});
+		
+		AOS.init({
+			// offset: 200,
+			duration: 700,
+			easing: 'ease-in-quad',
+			// delay: 100,
+		});
 
 	/* var input = document.querySelector('#phone');
 
