@@ -1,0 +1,63 @@
+.faq
+	padding: 50px 0
+	&__tabs
+		margin: auto
+
+.tabs
+	max-width: 800px
+	&__item
+		overflow: hidden
+		cursor: pointer
+		transition: all .8s ease-in-out
+		padding-top: 10px
+		padding-bottom: 10px
+		max-height: 60px
+		border-top: 1px solid #000
+		&:last-child
+			border-bottom: 1px solid #000
+		&_head
+			display: flex
+			justify-content: space-between
+			align-items: center
+			+sans-serif
+			margin-bottom: 15px
+
+		&_question
+			display: flex
+			font-size: 16px
+			font-weight: 500
+		&_num
+			margin-right: 10px
+		&_icon
+			font-size: 30px
+			transition: all .5s ease
+			&_active
+				transform: rotate(45deg)
+		&_content
+			text-align: left
+			+roboto
+			font-weight: 300
+			margin-bottom: 10px
+		&_active
+			max-height: 200px 
+
+
+@media (max-width: 500px)
+	.tabs
+		&__item
+			// max-height: 80px
+			&_question
+				font-size: 12px
+			&_content
+				font-size: 13px
+			&_active
+				max-height: 250px
+				// margin-bottom: 20px
+
+
+/* @media (max-width: 450px)
+	.tabs
+		&__item
+			max-height: 60px
+			&_question
+				font-size: 12px */

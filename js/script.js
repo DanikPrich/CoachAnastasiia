@@ -79,4 +79,27 @@
 		return false;
 	});
 
+
+	/* Функция табов */
+
+	const tabs = document.querySelectorAll(".tabs__item");
+  tabs.forEach(elem => {
+    if (!elem.classList.contains("tabs__item_active")) {
+      elem.addEventListener("click", () => {
+        elem.classList.toggle("tabs__item_active")
+				elem.querySelector('.tabs__item_icon').classList.toggle("tabs__item_icon_active")
+      })
+    }
+  })
+
+
+
+	/* Открыть все табы */
+	/* tabs.forEach(elem => {
+    if (!elem.classList.contains("tabs__item_active")) {
+        elem.classList.toggle("tabs__item_active")
+				elem.querySelector('.tabs__item_icon').classList.toggle("tabs__item_icon_active")
+    }
+  }) */
+
 });
