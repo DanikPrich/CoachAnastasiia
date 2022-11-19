@@ -9,7 +9,9 @@
 
 		popupElem.addEventListener('click', (e) => {
 			if(e.target.matches('.popup__wrapper') || e.target.matches('.popup_close')) {
-				popupElem.classList.remove('popup__active')
+				popupElem.classList.remove('popup__active');
+				document.querySelector('body').style.overflow = 'visible';
+
 			}
 		})
 
@@ -102,11 +104,12 @@
     }
   })
 
-	popupTitle = document.querySelector('.popup-block__title');
-	popupText = document.querySelector('.popup-block__text');
+	
 
 	function popupOpen({ title, text }) {
-		debugger
+		popupTitle = document.querySelector('.popup-block__title');
+		popupText = document.querySelector('.popup-block__text');	
+
 		document.querySelector('body').style.overflow = 'hidden';
 		popupElem.classList.add('popup__active');
 		popupTitle.innerHTML = title;
@@ -140,7 +143,7 @@
 					telegramElem = document.querySelector("#telegram"),
 					instagramElem = document.querySelector("#instagram");
 
-		if(!phoneElem.classList.contains('error') && phoneElem.value){
+		if(!phoneElem.classList.contains('error') && phoneElem.value && nameElem.value && telegramElem.value && instagramElem.value){
 
 			const data = {
 				name: nameElem.value,
@@ -158,8 +161,8 @@
 			})
 			.catch(() => {
 				popupOpen({
-					title: "Oops..",
-					text: "Something went wrong"
+					title: "Упс..",
+					text: "Что-то пошло не так"
 				})
 			})
 
