@@ -2,7 +2,6 @@
 	
 	window.addEventListener("DOMContentLoaded", () => {
 		
-		
 		$('.results-slider').slick({
 			draggable: true,
 			dots: true,
@@ -56,7 +55,8 @@
 			} else {
 				input.classList.add("error");
 				let errorCode = iti.getValidationError();
-				errorMsg.innerHTML = errorMap[errorCode];
+				
+				errorMsg.innerHTML = errorMap[errorCode] ? errorMap[errorCode] : errorMap[0]
 				errorMsg.classList.remove("hide");
 			}
 		}
@@ -81,7 +81,6 @@
 
 
 	/* Функция табов */
-
 	const tabs = document.querySelectorAll(".tabs__item");
   tabs.forEach(elem => {
     if (!elem.classList.contains("tabs__item_active")) {
@@ -93,13 +92,43 @@
   })
 
 
+	async function postData (url, data) {
+		const res = await fetch(url, {
+				method: "POST",
+				headers: {
+						'Content-type': 'application/json'
+				},
+				body: JSON.stringify(data)
+		});
+		return await res.json();
+	};
 
-	/* Открыть все табы */
-	/* tabs.forEach(elem => {
-    if (!elem.classList.contains("tabs__item_active")) {
-        elem.classList.toggle("tabs__item_active")
-				elem.querySelector('.tabs__item_icon').classList.toggle("tabs__item_icon_active")
-    }
-  }) */
+
+	const btnFormSubmit = document.querySelector("#formSubmit")
+	
+	console.log(btnFormSubmit)
+	btnFormSubmit.addEventListener('click', (e) => {
+		e.preventDefault();
+
+		const nameElem = document.querySelector("#name"),
+					phoneElem = document.querySelector("#phone"),
+					telegramElem = document.querySelector("#telegram"),
+					instagramElem = document.querySelector("#instagram");
+
+		if(!phoneElem.classList.contains('error') && phoneElem.value){
+
+			const data = {
+				name: nameElem.value,
+				tel: phoneElem.value,
+				telegram: telegramElem.value,
+				instagram: instagramElem.value
+			}
+
+			const res = postData('/send.php', data)
+
+			console.log(res)
+		}
+		
+	})
 
 });
