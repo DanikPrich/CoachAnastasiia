@@ -2,6 +2,17 @@
 	
 	window.addEventListener("DOMContentLoaded", () => {
 		
+		/* Функция попапки */
+
+		popupElem = document.querySelector('.popup')
+		
+
+		popupElem.addEventListener('click', (e) => {
+			if(e.target.matches('.popup__wrapper') || e.target.matches('.popup_close')) {
+				popupElem.classList.remove('popup__active')
+			}
+		})
+
 		$('.results-slider').slick({
 			draggable: true,
 			dots: true,
@@ -91,6 +102,18 @@
     }
   })
 
+	popupTitle = document.querySelector('.popup-block__title');
+	popupText = document.querySelector('.popup-block__text');
+
+	function popupOpen({ title, text }) {
+		debugger
+		document.querySelector('body').style.overflow = 'hidden';
+		popupElem.classList.add('popup__active');
+		popupTitle.innerHTML = title;
+		popupText.innerHTML = text
+		
+	}
+
 
 	async function postData (url, data) {
 		const res = await fetch(url, {
@@ -100,11 +123,13 @@
 				},
 				body: JSON.stringify(data)
 		});
-		return await res.json();
+		return await res;
 	};
 
 
 	const btnFormSubmit = document.querySelector("#formSubmit")
+
+
 	
 	console.log(btnFormSubmit)
 	btnFormSubmit.addEventListener('click', (e) => {
@@ -125,6 +150,18 @@
 			}
 
 			const res = postData('/send.php', data)
+			.then(() => {
+				popupOpen({
+					title: "Благодарю за регистрацию!",
+					text: "Я свяжусь с вами в ближайшее время."
+				})
+			})
+			.catch(() => {
+				popupOpen({
+					title: "Oops..",
+					text: "Something went wrong"
+				})
+			})
 
 			console.log(res)
 		}
