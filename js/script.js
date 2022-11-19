@@ -2,6 +2,15 @@
 	
 	window.addEventListener("DOMContentLoaded", () => {
 		
+		/* Функция попапки */
+
+		popupElem = document.querySelector('.popup')
+
+		popupElem.addEventListener('click', (e) => {
+			if(e.target.matches('.popup__wrapper') || e.target.matches('#popup_close')) {
+				popupElem.classList.remove('popup__active')
+			}
+		})
 		$('.results-slider').slick({
 			draggable: true,
 			dots: true,
