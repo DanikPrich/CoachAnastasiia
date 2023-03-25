@@ -345,8 +345,7 @@ h6 {
 }
 .header {
   padding: 150px 0;
-  background: url("/img/backgrounds/bg.jpg");
-  background-size: cover;
+  background-color: rgba(235, 229, 224, 0.521);
 }
 
 .header__wrapper {
@@ -618,7 +617,7 @@ h6 {
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 0px;
-  background-color: #fff6f2;
+  background-color: rgba(235, 229, 224, 0.521);
   color: inherit;
   transition: 0.5s ease-in-out;
 }
@@ -650,8 +649,7 @@ h6 {
   }
 }
 .results {
-  background: url("/img/backgrounds/bg2.jpg");
-  background-size: cover;
+  background-color: rgba(235, 229, 224, 0.521);
 }
 .results-slider-wrap {
   margin: auto;
@@ -717,7 +715,7 @@ h6 {
   }
 }
 .youfind-block {
-  background-color: #fff6f2;
+  background-color: rgba(235, 229, 224, 0.521);
   padding: 40px 80px;
   display: flex;
   position: relative;
@@ -883,12 +881,13 @@ h6 {
   font-size: 24px;
   padding-bottom: 30px;
   margin: auto;
-  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+          animation: arrow 2s infinite;
   text-align: center;
 }
 .services-card {
   padding: 30px;
-  background-color: #fff6f2;
+  background-color: rgba(235, 229, 224, 0.521);
   max-height: 650px;
   width: 380px;
   min-width: 380px;
@@ -960,18 +959,39 @@ h6 {
   padding: 20px 30px;
 }
 
-@keyframes arrow {
+@-webkit-keyframes arrow {
   0% {
     transform: translateX(0%);
-    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   50% {
     transform: translateX(5%);
-    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   100% {
     transform: translateX(0%);
-    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0%);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateX(5%);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0%);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
 }
 @media (max-width: 1700px) {
@@ -1036,8 +1056,7 @@ h6 {
   }
 }
 .form {
-  background: url("/img/backgrounds/bg.jpg");
-  background-size: cover;
+  background-color: rgba(235, 229, 224, 0.521);
   padding-top: 50px;
 }
 .form__wrapper {
