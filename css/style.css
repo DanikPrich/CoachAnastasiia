@@ -360,7 +360,7 @@ h6 {
 }
 
 .header__title {
-  color: #40403f;
+  color: #626262;
   font-size: 80px;
   font-family: "Playfair Display";
   line-height: 1.55;
@@ -385,14 +385,14 @@ h6 {
 .header__image {
   width: 430px;
   position: relative;
-  left: -70px;
+  left: 30px;
 }
 
 .header__subimage {
   width: 240px;
   position: absolute;
-  top: 400px;
-  right: 150px;
+  top: 365px;
+  right: 485px;
 }
 .header__subimage img {
   position: relative;
@@ -430,7 +430,7 @@ h6 {
   }
   .header__subimage {
     width: 200px;
-    right: 30px;
+    right: 320px;
   }
 }
 @media (max-width: 991px) {
@@ -451,12 +451,12 @@ h6 {
     font-size: 18px;
   }
   .header__image {
-    left: -70px;
+    left: 20px;
     width: 400px;
   }
   .header__subimage {
-    width: 170px;
-    right: 300px;
+    width: 200px;
+    right: 250px;
   }
 }
 @media (max-width: 768px) {
@@ -881,8 +881,7 @@ h6 {
   font-size: 24px;
   padding-bottom: 30px;
   margin: auto;
-  -webkit-animation: arrow 2s infinite;
-          animation: arrow 2s infinite;
+  animation: arrow 2s infinite;
   text-align: center;
 }
 .services-card {
@@ -959,42 +958,21 @@ h6 {
   padding: 20px 30px;
 }
 
-@-webkit-keyframes arrow {
-  0% {
-    transform: translateX(0%);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  50% {
-    transform: translateX(5%);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateX(0%);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-}
-
 @keyframes arrow {
   0% {
     transform: translateX(0%);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   50% {
     transform: translateX(5%);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     transform: translateX(0%);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 }
-@media (max-width: 1700px) {
+@media (max-width: 1260px) {
   .services__wrapper {
     justify-content: start;
     flex-wrap: nowrap;
