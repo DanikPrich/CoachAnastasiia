@@ -134,6 +134,7 @@
 
 
 	
+	console.log(btnFormSubmit)
 	btnFormSubmit.addEventListener('click', (e) => {
 		e.preventDefault();
 
