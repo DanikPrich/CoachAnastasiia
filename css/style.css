@@ -859,9 +859,6 @@ h6 {
 .services {
   padding-top: 40px;
 }
-.services__title {
-  margin-bottom: 20px;
-}
 .services__container {
   max-width: 1800px;
   width: 100%;
@@ -972,7 +969,10 @@ h6 {
     animation-timing-function: ease-in;
   }
 }
-@media (max-width: 1260px) {
+@media (max-width: 1660px) {
+  .services__title {
+    margin-bottom: 20px;
+  }
   .services__wrapper {
     justify-content: start;
     flex-wrap: nowrap;
