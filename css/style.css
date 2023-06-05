@@ -1301,4 +1301,12 @@ h6 {
 }
 .popup__active {
   display: flex;
+}
+
+.poll {
+  background-color: rgba(235, 229, 224, 0.521);
+  padding: 80px 0;
+}
+.poll__btn {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
