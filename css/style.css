@@ -343,6 +343,12 @@ h6 {
     height: 40px;
   }
 }
+@media (max-width: 370px) {
+  .button {
+    font-size: 14px;
+    text-align: center;
+  }
+}
 .header {
   padding: 150px 0;
   background-color: rgba(235, 229, 224, 0.521);
@@ -1304,8 +1310,9 @@ h6 {
 }
 
 .poll {
-  background-color: rgba(235, 229, 224, 0.521);
+  background-color: white;
   padding: 80px 0;
+  border-bottom: 10px solid rgba(235, 229, 224, 0.521);
 }
 .poll__btn {
   text-align: center;
