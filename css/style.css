@@ -1316,4 +1316,26 @@ h6 {
 }
 .poll__btn {
   text-align: center;
+}
+
+.certificate {
+  padding: 50px 0 80px 0;
+  border-bottom: 10px solid rgba(235, 229, 224, 0.521);
+}
+.certificate__wrapper {
+  text-align: center;
+}
+.certificate__img {
+  max-width: 700px;
+}
+
+@media (max-width: 760px) {
+  .certificate__img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 660px) {
+  .certificate {
+    padding: 30px 0 30px 0;
+  }
 }/*# sourceMappingURL=style.css.map */
